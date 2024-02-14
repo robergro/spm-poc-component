@@ -1,0 +1,49 @@
+configurations:
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkTagTesting/
+        - Sources/SparkTagSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoMockable.stencil
+    output: Sources/SparkTagTesting/Generated/AutoMockable.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkTag]
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkTagTesting/
+        - Sources/SparkTagSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoMockTest.stencil
+    output: Sources/SparkTagTesting/Generated/AutoMockTest.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkTag]
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkTagTesting/
+        - Sources/SparkTagSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoPublisherTest.stencil
+    output: Sources/SparkTagTesting/Generated/AutoPublisherTest.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkTag]
+  - sources:
+      include:
+        - Sources/
+      exclude:
+        - Sources/SparkTagTesting/
+        - Sources/SparkTagSnapshotTesting/
+    templates:
+      - .sourcery/template/SparkAutoViewModelStub.stencil
+    output: Sources/SparkTagTesting/Generated/AutoViewModelStub.generated.swift
+    args:
+      autoMockableImports: [Combine, SparkTheming]
+      autoMockableTestableImports: [SparkTag]
