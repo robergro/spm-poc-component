@@ -20,28 +20,30 @@ let package = Package(
     ],
     dependencies: [
         // Git
-//        .package(
-//            url: "https://github.com/robergro/spm-poc-common.git",
-//            from: "1.0.0"
-//        ),
-//        .package(
-//            url: "https://github.com/robergro/spm-poc-theming.git",
-//            from: "1.0.0"
-//        ),
+       .package(
+           url: "https://github.com/robergro/spm-poc-common.git",
+           branch: "main"
+       ),
+       .package(
+           url: "https://github.com/robergro/spm-poc-theming.git",
+           branch: "main"
+       ),
 
         // Local
-        .package(
-            path: "../spm-poc-common"
-        ),
-        .package(
-            path: "../spm-poc-theming"
-        ),
+        // .package(
+        //     path: "../spm-poc-common"
+        // ),
+        // .package(
+        //     path: "../spm-poc-theming"
+        // ),
 
+        /*
         // External
         .package(
             url: "https://github.com/realm/SwiftLint",
             from: "0.54.0"
         )
+         */
     ],
     targets: [
         .target(
@@ -55,13 +57,13 @@ let package = Package(
                     name: "SparkTheming",
                     package: "spm-poc-theming"
                 )
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
-            ]
+            ]*/
         ),
         .target(
             name: "SparkTagTesting",
@@ -83,13 +85,13 @@ let package = Package(
                     name: "SparkTheme",
                     package: "spm-poc-theming"
                 )
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
-            ]
+            ]*/
         ),
         .testTarget(
             name: "SparkTagUnitTests",
@@ -105,13 +107,13 @@ let package = Package(
                     package: "spm-poc-theming"
                 )
                 // TODO: do we need access to the Spark Theme ?
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
-            ]
+            ]*/
         ),
         .testTarget(
             name: "SparkTagSnapshotTests",
@@ -122,13 +124,13 @@ let package = Package(
                     name: "SparkInternalSnapshotTesting",
                     package: "spm-poc-common"
                 ),
-            ],
+            ]/*,
             plugins: [
                 .plugin(
                     name: "SwiftLintPlugin",
                     package: "SwiftLint"
                 )
-            ]
+            ]*/
         ),
     ]
 )
