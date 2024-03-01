@@ -35,15 +35,7 @@ let package = Package(
         // ),
         // .package(
         //     path: "../spm-poc-theming"
-        // ),
-
-        /*
-        // External
-        .package(
-            url: "https://github.com/realm/SwiftLint",
-            from: "0.54.0"
-        )
-         */
+        // )
     ],
     targets: [
         .target(
@@ -57,13 +49,7 @@ let package = Package(
                     name: "SparkTheming",
                     package: "spm-poc-theming"
                 )
-            ]/*,
-            plugins: [
-                .plugin(
-                    name: "SwiftLintPlugin",
-                    package: "SwiftLint"
-                )
-            ]*/
+            ]
         ),
         .target(
             name: "SparkTagTesting",
@@ -85,13 +71,7 @@ let package = Package(
                     name: "SparkTheme",
                     package: "spm-poc-theming"
                 )
-            ]/*,
-            plugins: [
-                .plugin(
-                    name: "SwiftLintPlugin",
-                    package: "SwiftLint"
-                )
-            ]*/
+            ]
         ),
         .testTarget(
             name: "SparkTagUnitTests",
@@ -106,14 +86,7 @@ let package = Package(
                     name: "SparkThemingTesting",
                     package: "spm-poc-theming"
                 )
-                // TODO: do we need access to the Spark Theme ?
-            ]/*,
-            plugins: [
-                .plugin(
-                    name: "SwiftLintPlugin",
-                    package: "SwiftLint"
-                )
-            ]*/
+            ]
         ),
         .testTarget(
             name: "SparkTagSnapshotTests",
@@ -124,13 +97,7 @@ let package = Package(
                     name: "SparkInternalSnapshotTesting",
                     package: "spm-poc-common"
                 ),
-            ]/*,
-            plugins: [
-                .plugin(
-                    name: "SwiftLintPlugin",
-                    package: "SwiftLint"
-                )
-            ]*/
+            ]
         ),
     ]
 )
