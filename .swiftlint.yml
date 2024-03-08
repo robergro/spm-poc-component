@@ -1,4 +1,5 @@
 included:
+    - Package.swift
     - Sources
     - Tests
 
