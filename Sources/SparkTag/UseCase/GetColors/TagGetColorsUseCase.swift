@@ -7,6 +7,7 @@
 //
 
 import SparkTheming
+import Foundation
 
 // sourcery: AutoMockable
 protocol TagGetColorsUseCaseable {
